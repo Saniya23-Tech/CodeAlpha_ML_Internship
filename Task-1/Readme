@@ -1,0 +1,98 @@
+# Credit Scoring Model using Random Forest
+
+## Overview
+This project focuses on predicting an individual's creditworthiness using Machine Learning. The model analyzes financial and demographic information to classify customers based on their credit risk.
+
+## Problem Statement
+Financial institutions need to evaluate whether a customer is likely to repay a loan responsibly. Manual assessment can be time-consuming and subjective. This project uses Machine Learning to automate the credit risk prediction process.
+
+## Dataset
+The dataset used in this project was obtained from Kaggle.
+
+**Dataset:** German Credit Risk Dataset
+
+The dataset contains customer information such as:
+
+- Age
+- Sex
+- Job
+- Housing
+- Saving Accounts
+- Checking Account Status
+- Credit Amount
+- Loan Duration
+- Purpose of Loan
+- Risk (Target Variable)
+
+## Libraries Used
+
+- Pandas
+- NumPy
+- Matplotlib
+- Seaborn
+- Scikit-learn
+- Joblib
+
+## Data Preprocessing
+
+The following preprocessing steps were performed:
+
+- Loaded the dataset using Pandas.
+- Handled missing values.
+- Encoded categorical variables into numerical values using Label Encoding.
+- Separated features and target variable.
+- Split the data into training and testing sets.
+
+## Why Random Forest?
+
+Random Forest was chosen because:
+
+- It performs well on classification problems.
+- It can capture complex relationships between features.
+- It reduces overfitting by combining multiple decision trees.
+- It handles both numerical and categorical data effectively.
+- It provides feature importance scores, helping understand which variables influence credit risk.
+
+## Model Used
+
+- Random Forest Classifier
+
+## Evaluation Metrics
+
+The model performance was evaluated using:
+
+- Accuracy Score
+- Precision
+- Recall
+- F1-Score
+- ROC-AUC Score
+- Confusion Matrix
+
+These metrics help assess the model's ability to correctly classify customers and measure its overall reliability.
+
+## Workflow
+
+1. Data Collection
+2. Data Preprocessing
+3. Feature Encoding
+4. Train-Test Split
+5. Model Training using Random Forest
+6. Prediction
+7. Model Evaluation
+8. Feature Importance Analysis
+9. Model Saving
+
+## Key Learning Outcomes
+
+Through this project, I learned:
+
+- Data preprocessing techniques
+- Handling missing values
+- Encoding categorical variables
+- Building classification models
+- Evaluating model performance using multiple metrics
+- Understanding feature importance in Machine Learning
+
+## Author
+
+Mohammad Saniya
