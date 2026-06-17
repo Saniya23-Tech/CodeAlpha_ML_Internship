@@ -1,0 +1,239 @@
+# 🎤 Speech Emotion Recognition using LSTM
+
+## Overview
+
+This project is a Speech Emotion Recognition system developed as part of the **CodeAlpha AI/ML Internship**.
+
+The system analyzes human speech and predicts the underlying emotion expressed in the audio. It uses **Deep Learning (LSTM)** along with **MFCC (Mel-Frequency Cepstral Coefficients)** features extracted from speech signals.
+
+The final model is integrated with **Streamlit**, allowing users to upload a WAV audio file and receive the predicted emotion.
+
+---
+
+## Problem Statement
+
+Human speech carries emotional information that can be used to understand a person's feelings. This project aims to automatically classify emotions from speech audio using deep learning techniques.
+
+The model predicts emotions such as:
+
+- Happy 😊
+- Sad 😢
+- Angry 😠
+- Calm 😌
+- Neutral 😐
+- Fearful 😨
+- Disgust 🤢
+- Surprised 😲
+
+---
+
+## Dataset Used
+
+### RAVDESS Emotional Speech Audio Dataset
+
+This project uses the **Ryerson Audio-Visual Database of Emotional Speech and Song (RAVDESS)** dataset.
+
+Dataset Link:
+
+https://www.kaggle.com/datasets/uwrfkaggler/ravdess-emotional-speech-audio
+
+### Dataset Structure
+
+The dataset contains:
+
+- 24 actor folders (`Actor_01` to `Actor_24`)
+- Multiple speech recordings for each actor
+- Audio samples representing different emotions
+
+---
+
+## Why Speech Emotion Recognition?
+
+Speech Emotion Recognition has applications in:
+
+- Virtual Assistants
+- Human-Computer Interaction
+- Mental Health Monitoring
+- Customer Service Analysis
+- Call Center Analytics
+- Healthcare Systems
+- Smart AI Assistants
+- Emotion-Aware Applications
+
+---
+
+## Technologies Used
+
+- Python
+- NumPy
+- Pandas
+- Librosa
+- TensorFlow
+- Keras
+- Scikit-learn
+- Streamlit
+- Joblib
+- Jupyter Notebook
+
+---
+
+## Installation
+
+Install the required libraries:
+
+```bash
+pip install numpy pandas librosa tensorflow scikit-learn streamlit joblib
+```
+
+---
+
+## Project Workflow
+
+### 1. Dataset Loading
+
+The RAVDESS audio files are loaded from the actor folders.
+
+### 2. Emotion Extraction
+
+Emotion labels are extracted from the filenames.
+
+### 3. Feature Extraction
+
+MFCC (Mel-Frequency Cepstral Coefficients) are extracted from each audio file.
+
+MFCCs capture important speech characteristics and are widely used in speech processing tasks.
+
+### 4. Label Encoding
+
+Emotion labels are converted into numerical values using LabelEncoder.
+
+### 5. Train-Test Split
+
+The dataset is divided into training and testing sets.
+
+### 6. Model Building
+
+An LSTM model is created using TensorFlow/Keras.
+
+### 7. Model Training
+
+The model learns patterns from the MFCC features.
+
+### 8. Model Evaluation
+
+The trained model is evaluated on unseen test data.
+
+### 9. Model Saving
+
+The trained model is saved as:
+
+- `emotion_model.h5`
+
+The label encoder is saved as:
+
+- `label_encoder.pkl`
+
+### 10. Streamlit Deployment
+
+Users can upload a WAV file and receive the predicted emotion.
+
+---
+
+## Why TensorFlow and LSTM?
+
+### Why TensorFlow?
+
+TensorFlow is one of the most widely used deep learning frameworks. It provides:
+
+- Efficient model training
+- GPU support
+- Easy deployment
+- High scalability
+- Integration with Keras
+
+### Why LSTM?
+
+LSTM (Long Short-Term Memory) networks are designed to learn sequential patterns.
+
+Speech signals contain temporal information, and LSTMs are effective at capturing these dependencies.
+
+Advantages of LSTM:
+
+- Handles sequential data effectively
+- Remembers important information
+- Reduces vanishing gradient problems
+- Suitable for speech-related tasks
+
+---
+
+## Model Architecture
+
+### LSTM Layer
+
+- 128 LSTM units
+
+### Dropout Layer
+
+- 30% dropout to reduce overfitting
+
+### Dense Layer
+
+- 65 neurons with ReLU activation
+
+### Output Layer
+
+- 8 neurons with Softmax activation
+
+---
+
+## Input
+
+- WAV audio file
+
+## Output
+
+Predicted emotion with confidence score.
+
+Example:
+
+```text
+Emotion Detected: Happy 😊
+Confidence: 92%
+```
+
+---
+
+## Files Included
+
+```text
+Task_2_Speech_Emotion_Recognition/
+│
+├── Audio_Recognition.ipynb
+├── app.py
+├── emotion_model.h5
+├── label_encoder.pkl
+├── README.md
+└── .gitignore
+```
+
+---
+
+## Future Improvements
+
+- Real-time microphone support
+- Improved model accuracy
+- CNN + LSTM architecture
+- Data augmentation techniques
+- Better feature engineering
+
+---
+
+## Author
+
+**Mohammad Saniya**
+
+CodeAlpha AI/ML Intern
+
+---
+
+*"Learning consistently and building one project at a time."* 🚀
